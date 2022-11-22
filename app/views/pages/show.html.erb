@@ -1,0 +1,38 @@
+<div class="Profile-container">
+
+  <div class="back to home page">
+    <%= link_to 'Back to home page', friends_path(@friend) %>
+  </div>
+
+  <div class="friend-profile-container">
+    <div class="card-trip">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+          <h5>Email:</h5>
+          <p><%= @user.email %></p>
+          <h5>Address:</h5>
+          <p><%= @user.address %></p>
+          <h5>Age</h5>
+          <p><%= @user.age %></p>
+          <h5>Birthday</h5>
+          <p><%= @user.birth_date %></p>
+          <h5>Gender</h5>
+          <p><%= @user.gender %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="My Bookings">
+  <% @bookings.each do |booking|%>
+    <li> <%= booking.friend.user.first_name %> </li>
+    <% end %>
+  </div>
+
+  <div class="Become a friend">
+    <%= link_to 'Become a friend', new_friend_path(@friend) %>
+  </div>
+
+</div>
