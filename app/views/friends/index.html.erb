@@ -1,0 +1,14 @@
+<div class="home-container">
+  <div class="search-bar">
+  
+  </div>
+
+  <div class="home-friend-card">
+    <% @friends.each do |friend| %>
+      <a class="individual-friend-card">
+          <%= link_to "#{friend.user.first_name}", friend%>
+          <% end %>
+      </a>
+  </div>
+
+</div>
