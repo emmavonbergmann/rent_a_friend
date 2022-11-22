@@ -1,12 +1,46 @@
-.navbar-lewagon {
+.navbar-airbnb {
   justify-content: space-between;
   background: white;
+  border-bottom: 1px solid lightgrey;
+  margin: 10px 20px 10px;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-airbnb .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-brand img {
+  width: 85px;
+}
+.buttons {
+  border-radius: 30px;
+  border: 1px solid lightgray;
+  box-shadow: 5px 3px 3px rgb(230, 230, 230);
+}
+.anywhere, .anyweek, .search {
+  border: 1px solid white;
+  padding: 8px 7px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  background-color: white;
+  border-radius: 50px;
+}
+.lines{
+  flex: 0 0 1px;
+  height: 24px;
+  width: 1px;
+  color: black;
+}
+.anywhere:hover, .anyweek:hover, .search:hover {
+  opacity: 1;
+}
+
+.secondpart {
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 8px 14px;
+  border-radius: 30px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+
 }
