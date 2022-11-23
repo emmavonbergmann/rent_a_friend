@@ -34,27 +34,28 @@
 }
 
 .backbutton {
-  border-radius: 30px;
+  border-radius: 50px;
   border: 1px solid lightgray;
-  box-shadow: 5px 3px 3px rgb(230, 230, 230);
+  box-shadow: 5px 3px 3px rgb(251, 179, 179);
   margin-top: 20px;
   margin-bottom: 5px;
-  padding: 20px 20px 20px 20px;
-  background-color: white;
+  padding: 10px;
+  background-color: rgb(248, 70, 70);
 }
 
 .backbutton:hover {
   opacity: 1;
+  background-color: #f19597;
 }
 
 .bookmebutton {
-  border-radius: 30px;
+  border-radius: 20px;
   border: 1px solid white;
-  box-shadow: 5px 3px 3px rgb(230, 230, 230);
-  padding: 20px 20px 20px 20px;
-  background-color: white;
-  justify-content: flex-end;
+  box-shadow: 5px 3px 3px #9ee3fc;
+  padding: 10px;
+  background-color: #0FA6DF;
 }
 .bookmebutton:hover {
   opacity: 1;
+  background-color: #9ee3fc;
 }
