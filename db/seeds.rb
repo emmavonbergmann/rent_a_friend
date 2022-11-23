@@ -5,9 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-emma = User.create(first_name: "Emma", last_name: "Bergmann", gender: "female", age: 18, nationality: "german", password: "123456",
+p emma = User.create(first_name: "Emma", last_name: "Bergmann", gender: "female", age: 18, nationality: "german", password: "123456",
   email:"emma@gmail.com", phone:"+49 1234567234", address: "Strassestr. 1", birth_date: Date.new(2004, 02, 29))
 
+p emma.id
 emma_friend = Friend.create(user: emma, price: 30, hobbies: "my fish", zodiac_sign: "Pisces", pronouns: "she",
   about_me: "I am a great friend", availability: "monday, tuesday, friday")
 
