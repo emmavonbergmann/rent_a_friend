@@ -20,6 +20,11 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 40px;
+  text-decoration: none;
+  color: black;
+}
+.card-trip:hover {
+  color:black;
 }
 
 .card-trip > img {
@@ -53,4 +58,8 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.map {
+  height: 100vh;
 }
