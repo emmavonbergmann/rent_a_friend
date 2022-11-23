@@ -7,15 +7,16 @@
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   <div class="home-friend-card">
     <% @friends.each do |friend| %>
-      <%= link_to friend_path(friend), class: "card-trip" do %>
-        <img src="https://assets.materialup.com/uploads/b6c33467-82c3-442c-a2dc-c089bbff9fa1/preview.png" />
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= friend.user.first_name %></h2>
-            <p><%=  friend.hobbies.capitalize%></p>
+      <% unless friend.user == current_user %>
+        <%= link_to friend_path(friend), class: "card-trip" do %>
+          <img src="https://assets.materialup.com/uploads/b6c33467-82c3-442c-a2dc-c089bbff9fa1/preview.png" />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= friend.user.first_name %></h2>
+              <p><%=  friend.hobbies.capitalize%></p>
+            </div>
+            <h2 class="card-trip-pricing"> <%= friend.price %> €</h2>
           </div>
-          <h2 class="card-trip-pricing"> <%= friend.price %> €</h2>
-        </div>
       <% end %>
     <% end %>
   </div>

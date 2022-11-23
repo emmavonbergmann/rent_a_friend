@@ -31,11 +31,9 @@
           <h2 class="card-trip-pricing">Price: <%= @friend.price %> €</h2>
         </div>
         <div class="bookme">
-        <button class="bookmebutton"><%= link_to "Book Me", profile_path(current_user) %></button>
+        <button class="bookmebutton"><<%= link_to "Book #{@friend.user.first_name}", new_friend_booking_path(@friend) %></button>
         </div>
       </div>
     </div>
   </div>
-
-
 </div>
