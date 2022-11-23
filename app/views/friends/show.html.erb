@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="bookme">
-    <%= link_to "Book me as a friend", profile_path(current_user) %>
-  </div>
+<%= link_to "Book #{@friend.user.first_name}", new_friend_booking_path(@friend) %>
+</div>
 
 </div>

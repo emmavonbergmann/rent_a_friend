@@ -11,7 +11,7 @@
               <h2><%= friend.user.first_name %></h2>
               <p><%=  friend.hobbies.capitalize%></p>
             </div>
-            <h2 class="card-trip-pricing">10 €</h2>
+            <h2 class="card-trip-pricing"> <%= friend.price %> €</h2>
           </div>
         <% end %>
       <% end %>
