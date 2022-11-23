@@ -3,4 +3,58 @@
     text-decoration: none;
     color: black;
   }
+  a:hover{
+    color: black;
+  }
+}
+
+.details-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  grid: 1f;
+}
+
+.card-trip h5, p {
+  padding: 4px;
+  display: flex;
+}
+
+.availability {
+  display: grid;
+  gap: 15px
+}
+
+.friend-profile-container {
+  width: 650px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.backbutton {
+  border-radius: 30px;
+  border: 1px solid lightgray;
+  box-shadow: 5px 3px 3px rgb(230, 230, 230);
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding: 20px 20px 20px 20px;
+  background-color: white;
+}
+
+.backbutton:hover {
+  opacity: 1;
+}
+
+.bookmebutton {
+  border-radius: 30px;
+  border: 1px solid white;
+  box-shadow: 5px 3px 3px rgb(230, 230, 230);
+  padding: 20px 20px 20px 20px;
+  background-color: white;
+  justify-content: flex-end;
+}
+.bookmebutton:hover {
+  opacity: 1;
 }

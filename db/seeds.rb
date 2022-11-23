@@ -12,7 +12,7 @@ p emma.id
 emma_friend = Friend.create(user: emma, price: 30, hobbies: "my fish", zodiac_sign: "Pisces", pronouns: "she",
   about_me: "I am a great friend", availability: "monday, tuesday, friday")
 
-yllka = User.create(first_name: "Yllka", last_name: "Shalla", gender: "female", age: 24, nationality: "albanian", password: "123456",
+yllka = User.create(first_name: "Yllka", last_name: "Shala", gender: "female", age: 24, nationality: "albanian", password: "123456",
   email:"yllka@gmail.com", phone:"+49 1234567234", address: "Strassestr. 1", birth_date: Date.new(1997, 05, 13))
 
 yllka_friend = Friend.create(user: yllka, price: 30, hobbies: "my bird", zodiac_sign: "taurus", pronouns: "she",
