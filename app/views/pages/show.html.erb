@@ -28,7 +28,10 @@
   <div class="My Bookings">
   <h1>my bookings</h1>
   <% @bookings.each do |booking|%>
-    <li> <%= booking.friend.user.first_name %> </li>
+    <li> <%= booking.friend.user.first_name %> - <%= booking.occurs_on %> </li>
+    <div>
+    <%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+    </div>
     <% end %>
   </div>
 
