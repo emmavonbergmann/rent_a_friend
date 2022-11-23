@@ -1,6 +1,13 @@
 class FriendsController < ApplicationController
   def index
     @friends = Friend.all
+    # The `geocoded` scope filters only flats with coordinates
+    @markers = @friends.geocoded.map do |friend|
+      {
+        lat: friend.latitude,
+        lng: friend.longitude
+      }
+    end
   end
 
   def show
