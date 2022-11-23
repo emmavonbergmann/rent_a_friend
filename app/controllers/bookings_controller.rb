@@ -9,10 +9,14 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @friend = Friend.find(params[:friend_id])
   end
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @friend = Friend.find(params[:friend_id])
+    @booking.friend = @friend
     if @booking.save
       redirect_to profile_path(current_user)
     else
@@ -21,6 +25,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:occurs_on, :user_id, :friend_id)
+    params.require(:booking).permit(:occurs_on, :friend_id)
   end
 end

@@ -4,15 +4,13 @@
   <div class="new-friend bg-white rounded p-3 shadow" style="width: 600px">
 
     <h1>Book me as a <strong>friend</strong> :</h1>
-    <%= simple_form_for(@booking) do |f| %>
+    <%= simple_form_for [@friend, @booking] do |f| %>
       <%= f.input :occurs_on %>
-      <%= f.input :hobbies %>
-      <%= f.input :price %>
       <%= f.submit "Submit", class: "btn btn-success" %>
 
     <% end %>
   </div>
   <div class="back to home page">
-      <%= link_to 'Cancel -> Back to home page', friends_path(@friend) %>
+      <%= link_to 'Cancel', friend_path(@friend) %>
     </div>
 </div>
