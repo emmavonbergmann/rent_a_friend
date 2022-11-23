@@ -1,6 +1,10 @@
 <div class="home-container">
   <div class="search-bar">
   </div>
+  <div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   <div class="home-friend-card">
     <% @friends.each do |friend| %>
       <%= link_to friend_path(friend), class: "card-trip" do %>
