@@ -1,6 +1,6 @@
 <div class="friend-container">
 
-  <div class="friend-image" style="background-image: url('https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" >
+  <div class="friend-image" style="background-image: url('<%= cl_image_path @user.photo.key, backgroundsize: :cover, crop: :fill %>')" >
   </div>
 
   <div class="friend-info">
