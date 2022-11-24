@@ -1,12 +1,10 @@
 <div class="Profile-container">
-
   <div class="back to home page">
     <%= link_to 'Back to home page', friends_path(@friend) %>
   </div>
-
   <div class="friend-profile-container">
     <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <img src="https://assets.materialup.com/uploads/b6c33467-82c3-442c-a2dc-c089bbff9fa1/preview.png"/>
       <div class="card-trip-infos">
         <div>
           <h1><%= @user.first_name %> <%= @user.last_name %></h1>
@@ -38,5 +36,4 @@
   <div class="Become a friend">
     <%= link_to 'Become a friend', new_friend_path(@friend) %>
   </div>
-
 </div>

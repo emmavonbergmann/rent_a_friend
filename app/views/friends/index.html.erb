@@ -1,10 +1,13 @@
 <div class="home-container">
   <div class="search-bar">
   </div>
+
   <div class="map"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
   <div class="home-friend-card">
     <% @friends.each do |friend| %>
       <% unless friend.user == current_user %>
@@ -17,6 +20,7 @@
             </div>
             <h2 class="card-trip-pricing"> <%= friend.price %> €</h2>
           </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
