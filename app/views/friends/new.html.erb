@@ -1,26 +1,19 @@
-<div class=container-new-friend>
-  <div class="new-friend bg-white rounded p-3 shadow" style="width: 600px">
-
-    <h1>Become a <strong>friend</strong> :</h1>
-    <%= simple_form_for(@friend) do |f| %>
+<div class="container-new-friend">
+  <div class="new-friend">
+    <h1>Register as a <strong>friend</strong> :</h1>
+    <div class="about-me">
+      <%= simple_form_for(@friend) do |f| %>
       <%= f.input :about_me %>
       <%= f.input :hobbies %>
       <%= f.input :price %>
       <%= f.input :zodiac_sign %>
       <%= f.input :availability %>
       <%= f.input :pronouns %>
-      <%= f.input :photo, as: :file %>
-      <%= f.submit "Submit", class: "btn btn-success" %>
-
+    </div>
+      <div class="buttons1">
+        <%= f.submit "Submit", class: "btn btn-success" %>
+        <%= link_to 'Back to home page', friends_path(@friend), class: "btn btn-danger" %>
+      </div>
     <% end %>
   </div>
-  <div class="back to home page">
-      <%= link_to 'Cancel -> Back to home page', friends_path(@friend) %>
-    </div>
-</div>
-<div class="flash flash-success alert alert-dismissible fade show" role="alert">
-  <span><strong>Yay!</strong> 🎉 you successfully signed in to our service.</span>
-  <a data-bs-dismiss="alert" aria-label="Close">
-    <i class="fas fa-times"></i>
-  </a>
 </div>
