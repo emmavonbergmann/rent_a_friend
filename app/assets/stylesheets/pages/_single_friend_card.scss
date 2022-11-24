@@ -1,0 +1,61 @@
+.friend-image {
+  object-fit: cover;
+  width: 100%;
+  height:300px;
+}
+
+.friend-container {
+  margin: 5px;
+}
+
+.friend-container h1 {
+  font-size: 30x;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.pricing h1 {
+  font-size: 20px;
+}
+
+.friend-info h5 {
+  font-size: 18x;
+  font-weight: 500;
+}
+
+.friend-info p {
+  font-size: 10x;
+  font-weight: 300;
+  margin: 0px;
+}
+
+.friend-info {
+  padding: 20px;
+}
+.friend-details {
+  display: flex;
+  justify-content: left;
+  gap: 200px;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.price-availability {
+  display: flex;
+  justify-content: left;
+  gap: 160px;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.bookme {
+  margin-right: 10px;
+}
+
+.btn bookmebutton {
+  border-radius: 3px;
+  color: grey;
+  border: 1px, solid, grey;
+}
