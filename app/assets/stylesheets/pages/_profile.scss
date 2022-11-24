@@ -1,0 +1,66 @@
+
+.Bookings {
+  display: flex;
+  justify-content: left;
+  gap: 45px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.My-Bookings {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.My-Bookings h4 {
+  font-weight: 700;
+}
+
+.profile-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  margin: 0px;
+}
+
+.profile-image > h1 {
+  color: white;
+  font-weight: 200;
+  letter-spacing: 8px;
+}
+
+.profile-container {
+  margin: 5px;
+}
+
+.profile-container h1 {
+  font-size: 30x;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.profile-info h5 {
+  font-size: 18x;
+  font-weight: 500;
+}
+
+.profile-info p {
+  font-size: 10x;
+  font-weight: 300;
+  margin: 0px;
+}
+
+.profile-info {
+  padding: 20px;
+}
+.profile-details {
+  display: flex;
+  justify-content: left;
+  gap: 100px;
+  text-align: left;
+  margin-bottom: 30px;
+}
