@@ -1,39 +1,50 @@
-  <div class="back">
-      <button class="backbutton"><%= link_to 'Back To Home Page', friends_path(@friend) %></button>
-    </div>
-<div class="friend-profile-container">
+<div class="friend-container">
 
-  <div class="card-trip">
-    <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
-    <div class="card-trip-infos">
-      <div>
-        <h1><%= @friend.user.first_name %> <%= @friend.user.last_name %></h1>
-        <div class="details-list">
-          <div>
-          <h5>About Me</h5>
-          <p><%= @friend.about_me %></p>
-          </div>
-          <div>
-          <h5>My zodiac sign</h5>
-          <p><%= @friend.zodiac_sign %></p>
-          </div>
-          <div>
-          <h5>My hobbie</h5>
-          <p><%= @friend.hobbies %></p>
-          </div>
-          <div>
-          <h5>My pronouns</h5>
-          <p><%= @friend.pronouns %></p>
-          </div>
-          </div>
-          <div class="availability">
-          <h2 class="card-trip-availability"> Availability: <%= @friend.availability %></h2>
-          <h2 class="card-trip-pricing">Price: <%= @friend.price %> €</h2>
-        </div>
-        <div class="bookme">
-        <button class="bookmebutton"><%= link_to "Book #{@friend.user.first_name}", new_friend_booking_path(@friend) %></button>
-        </div>
+  <div class="friend-image" style="background-image: url('https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" >
+  </div>
+
+  <div class="friend-info">
+
+    <div class="Name">
+      <h1><%= @friend.user.first_name %> <%= @friend.user.last_name %></h1>
+    </div>
+
+    <div class="friend-details">
+      <div class="About">
+        <h5>About Me:</h5>
+        <p><%= @friend.about_me %></p>
       </div>
+
+      <div class="Zodiac">
+        <h5>My Zodiac Sign:</h5>
+        <p><%= @friend.zodiac_sign %></p>
+      </div>
+
+      <div class="Hobbies">
+        <h5>My Hobbies:</h5>
+        <p><%= @friend.hobbies %></p>
+      </div>
+
+      <div class="Pronouns">
+        <h5>My Pronouns:</h5>
+        <p><%= @friend.pronouns %></p>
+      </div>
+    </div>
+
+    <div class="price-availability">
+      <div class="Availability">
+          <h5>My Availability:</h5>
+          <p><%= @friend.availability %></p>
+        </div>
+
+        <div class="Pricing">
+          <h5>My Pricing per day:</h5>
+          <p>Price:<%= @friend.price %>€</p>
+        </div>
+    </div>
+
+    <div class="bookme">
+      <%= link_to "Book #{@friend.user.first_name}", new_friend_booking_path(@friend), class:"btn btn-outline-secondary btn-lg"%>
     </div>
   </div>
 </div>
