@@ -1,6 +1,6 @@
 <div class="friend-container">
 
-  <div class="friend-image" style="background-image: url('https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" >
+ <div class="friend-image" style="background-image: url('<%= cl_image_path @user.photo.key, backgroundsize: :cover, crop: :fill %>')" >    
       <h1><%= @friend.user.first_name %> <%= @friend.user.last_name %></h1>
       <%= link_to "Book #{@friend.user.first_name} for #{@friend.price}€ a day", new_friend_booking_path(@friend), class:"btn btn-secondary"%>
   </div>

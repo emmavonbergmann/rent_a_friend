@@ -20,12 +20,14 @@ class FriendsController < ApplicationController
 
   def show
     @friend = Friend.find(params[:id])
+    @user = User.find(@friend.user_id)
     @booking = Booking.new
   end
 
   def new
-    if current_user.friends.any?
-      @friend = current_user.friends.last
+    if !current_user.friend.nil?
+      @friend = current_user.friend
+
     else
       @friend = Friend.new
     end
@@ -33,6 +35,7 @@ class FriendsController < ApplicationController
 
   def create
     @friend = Friend.new(friend_params)
+    @friend.user = current_user
     if @friend.save
       redirect_to friend_path(@friend)
     else
@@ -52,6 +55,6 @@ class FriendsController < ApplicationController
   private
 
   def friend_params
-    params.require(:friend).permit(:hobbies, :price, :zodiac_sign, :pronouns, :about_me, :availabitlity, :photo)
+    params.require(:friend).permit(:hobbies, :price, :zodiac_sign, :pronouns, :about_me, :availability)
   end
 end
