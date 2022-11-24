@@ -1,9 +1,9 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<h1>Book me as a Friend</h1>
+<p></p>
 <div class=container-new-friend>
   <div class="new-friend bg-white rounded p-3 shadow" style="width: 600px">
 
-    <h1>Book me as a <strong>friend</strong> :</h1>
+    <h1> You can choose the date:</h1>
     <%= simple_form_for [@friend, @booking] do |f| %>
       <%= f.input :occurs_on %>
       <%= f.submit "Submit", class: "btn btn-success" %>
@@ -11,6 +11,6 @@
     <% end %>
   </div>
   <div class="back to home page">
-      <%= link_to 'Cancel', friend_path(@friend) %>
+      <%= link_to 'Click to see the Friend´s details', friend_path(@friend) %>
     </div>
 </div>
