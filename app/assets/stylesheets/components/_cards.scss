@@ -12,14 +12,13 @@
   text-align: center;
   padding: 20px;
   display: block;
-  box-shadow: 3px 3px 6px rgb(230,230,230);
+  // box-shadow: 3px 3px 6px rgb(230,230,230);
 }
 
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 40px;
+  border-radius: 10px;
   text-decoration: none;
   color: black;
 }
@@ -58,6 +57,23 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.card-trip-infos {
+  height: 400px;
+  display: flex;
+}
+
+.card-details {
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.card-details h5, p{
+margin: 0px;
+padding: 0px;
 }
 
 .map {
