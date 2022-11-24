@@ -1,5 +1,13 @@
 <div class="home-container">
   <div class="search-bar">
+  <%= form_with url: friends_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a friend"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
   </div>
   <div class="map"
   data-controller="map"
@@ -7,7 +15,7 @@
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   <div class="home-friend-card">
     <% @friends.each do |friend| %>
-      <% unless friend.user == current_user %>
+      <% unless friend.id == current_user.id %>
         <%= link_to friend_path(friend), class: "card-trip" do %>
           <img src="https://assets.materialup.com/uploads/b6c33467-82c3-442c-a2dc-c089bbff9fa1/preview.png" />
           <div class="card-trip-infos">
