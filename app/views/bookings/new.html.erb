@@ -1,16 +1,14 @@
-<h1>Book me as a Friend</h1>
-<p></p>
-<div class=container-new-friend>
-  <div class="new-friend bg-white rounded p-3 shadow" style="width: 600px">
-
-    <h1> You can choose the date:</h1>
+<div class="container-new-friend">
+  <h2> Here you can book me as a Friend</h2>
+  <div class="new-friend bg-white rounded p-3 shadow" >
     <%= simple_form_for [@friend, @booking] do |f| %>
-      <%= f.input :occurs_on %>
-      <%= f.submit "Submit", class: "btn btn-success" %>
-
+      <div class="date">
+        <%= f.input :occurs_on %>
+      </div>
+    <div class="buttonss">
+      <%= f.submit "Book me now!", class: "btn btn-success" %>
+      <%= link_to 'Cancel me now!', friend_path(@friend), class: "btn btn-danger"%>
+    </div>
     <% end %>
   </div>
-  <div class="back to home page">
-      <%= link_to 'Click to see the Friend´s details', friend_path(@friend) %>
-    </div>
 </div>
