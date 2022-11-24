@@ -4,7 +4,7 @@
 <div class="friend-profile-container">
 
   <div class="card-trip">
-    <img src="https://assets.materialup.com/uploads/b6c33467-82c3-442c-a2dc-c089bbff9fa1/preview.png" />
+    <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="card-trip-infos">
       <div>
         <h1><%= @friend.user.first_name %> <%= @friend.user.last_name %></h1>

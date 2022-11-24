@@ -15,6 +15,8 @@ gem "pg", "~> 1.1"
 
 gem "pg_search"
 
+gem "cloudinary"
+
 gem "devise"
 
 # Use the Puma web server [https://github.com/puma/puma]
