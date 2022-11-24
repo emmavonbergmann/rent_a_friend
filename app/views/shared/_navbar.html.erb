@@ -1,15 +1,16 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-airbnb">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://img.freepik.com/premium-vector/community-logo-design-vector_67715-512.jpg?w=2000" %>
+    <%= link_to friends_path, class: "navbar-brand" do %>
+      <%= image_tag "https://cdn-icons-png.flaticon.com/512/2583/2583035.png" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="buttons">
+    <div class="Rent-a-friend"><h4>Rent a friend</h4></div>
+    <%# <div class="buttons">
       <button class="search-your-friend"><%= link_to "Search your friend", "#", class: "btn btn-ghost" %></button>
-    </div>
+
     <div class="secondpart">
       <ul class="navbar-nav me-auto">
           <li class="nav-item dropdown">
