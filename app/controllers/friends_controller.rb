@@ -1,13 +1,21 @@
 class FriendsController < ApplicationController
+
+
+
+
   def index
-    @friends = Friend.all
-    # The `geocoded` scope filters only flats with coordinates
-    @markers = @friends.geocoded.map do |friend|
-      {
-        lat: friend.latitude,
-        lng: friend.longitude
-      }
+    if params[:query].present?
+      @friends = Friend.global_search(params[:query])
+    else
+      @friends = Friend.all
     end
+    # The `geocoded` scope filters only flats with coordinates
+    #  @markers = @friends.geocoded.map do |friend|
+       # {
+        #  lat: friend.latitude,
+       #   lng: friend.longitude
+      #  }
+     # end
   end
 
   def show
@@ -44,6 +52,6 @@ class FriendsController < ApplicationController
   private
 
   def friend_params
-    params.require(:friend).permit(:hobbies, :price, :zodiac_sign, :pronouns, :about_me, :availabitlity)
+    params.require(:friend).permit(:hobbies, :price, :zodiac_sign, :pronouns, :about_me, :availabitlity, :photo)
   end
 end
