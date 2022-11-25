@@ -16,7 +16,44 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
-  <div class="home-friend-card">
+
+
+  <div class="cards">
+    <% @friends.each do |friend| %>
+      <%  if current_user && friend.user_id == current_user.id %>
+        <% next %>
+      <% else %>
+        <%= link_to friend_path(friend), class: "card-profile" do %>
+          <% if friend.user.photo.key %>
+            <div class="card-profile-image" style="background-image: url('<%= cl_image_path friend.user.photo.key, backgroundsize: :cover, crop: :fill %>')">
+            </div>
+            <div class="card-profile-overview">
+                <div class="card-profile-info">
+                  <h2><%= friend.user.first_name %></h2>
+                  <p><%=  friend.hobbies.capitalize%></p>
+                </div>
+                <h2 class="card-profile-price"> <%= friend.price %> € </h2>
+            </div>
+          <% else %>
+            <div class="card-profile-image" style="background-image:  url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60)">
+            </div>
+            <div class="card-profile-overview">
+                <div class="card-profile-info">
+                  <h2><%= friend.user.first_name %></h2>
+                  <p><%=  friend.hobbies.capitalize%></p>
+                </div>
+                <h2 class="card-profile-price"> <%= friend.price %> € </h2>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+<!-- >
+ <div class="home-friend-card">
     <% @friends.each do |friend| %>
       <%  if current_user && friend.user_id == current_user.id %>
         <% next %>
@@ -43,4 +80,3 @@
       <% end %>
     <% end %>
   </div>
-</div>
