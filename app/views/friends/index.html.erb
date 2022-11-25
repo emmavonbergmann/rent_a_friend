@@ -25,8 +25,8 @@
       <% else %>
         <%= link_to friend_path(friend), class: "card-profile" do %>
           <% if friend.user.photo.key %>
-            <div class="card-profile-image" style="background-image: url('<%= cl_image_path friend.user.photo.key, backgroundsize: :cover, crop: :fill %>')">
-            </div>
+            <img class="card-profile-image" src="<%= cl_image_path friend.user.photo.key %>" alt="">
+
             <div class="card-profile-overview">
                 <div class="card-profile-info">
                   <h2><%= friend.user.first_name %></h2>
