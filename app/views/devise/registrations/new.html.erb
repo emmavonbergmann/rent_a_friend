@@ -41,10 +41,44 @@
                   input_html: { autocomplete: "new-password" } %>
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
-    </div>
-  <% end %>
+  <div class="form-inputs">
+    <%= f.input :first_name,
+                autofocus: true,
+                input_html: { autocomplete: "first name" }%>
+    <%= f.input :last_name,
+                autofocus: true,
+                input_html: { autocomplete: "last name" }%>
+    <%= f.input :age,
+                autofocus: true,
+                input_html: { autocomplete: "age" }%>
+    <%= f.input :address,
+                autofocus: true,
+                input_html: { autocomplete: "address" }%>
+    <%= f.input :gender,
+                autofocus: true,
+                input_html: { autocomplete: "gender" }%>
+    <%= f.input :birth_date,
+                autofocus: true,
+                input_html: { autocomplete: "birth date" }%>
+    <%= f.input :nationality,
+                autofocus: true,
+                input_html: { autocomplete: "nationality" }%>
+    <%= f.input :phone,
+                autofocus: true,
+                input_html: { autocomplete: "phone number" }%>
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" }%>
+    <%= f.input :password,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" } %>
+    <%= f.input :password_confirmation,
+                required: true,
+                input_html: { autocomplete: "new-password" } %>
+    <%= f.input :photo, as: :file %>
+  </div>
 
   <%= render "devise/shared/links" %>
 </div>
