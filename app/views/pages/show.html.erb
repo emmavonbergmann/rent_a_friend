@@ -1,8 +1,12 @@
 <div class="profile-container">
-
-  <div class="profile-image" style="background-image: url('https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" >
-    <h1><%=  @user.first_name %> <%= @user.last_name %></h1>
-    <%= link_to link_to 'Sign up to become a friend', new_friend_path(@friend), class:"btn btn-secondary"%>
+  <div>
+    <% if @user.photo.key %>
+      <div class="friend-image" style="background-image: url('<%= cl_image_path @user.photo.key, backgroundsize: :cover, crop: :fill %>')" >
+    <% else %>
+      <div class="friend-image" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60')" >
+    <% end %>
+      <h1><%=  @user.first_name %> <%= @user.last_name %></h1>
+      <%= link_to link_to 'Sign up to become a friend', new_friend_path(@friend), class:"btn btn-secondary"%>
   </div>
 
   <div class="profile-info">

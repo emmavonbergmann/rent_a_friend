@@ -40,10 +40,9 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :photo, as: :file %>
+    <%= f.submit "Sign up" %>
   </div>
   <% end %>
 
-<div class="signin">
-  <%= render "devise/shared/links"%>
-</div>
+
 </div>
