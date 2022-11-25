@@ -9,13 +9,11 @@
       <%= f.input :zodiac_sign %>
       <%= f.input :availability %>
       <%= f.input :pronouns %>
-
+        <div class="buttons1">
+          <%= f.submit "Submit", class: "btn btn-success" %>
+          <%= link_to 'Back to home page', friends_path(@friend), class: "btn btn-danger" %>
+        </div>
+      <% end %>
     </div>
-      <div class="buttons1">
-        <%= f.submit "Submit", class: "btn btn-success" %>
-        <%= link_to 'Back to home page', friends_path(@friend), class: "btn btn-danger" %>
-      </div>
-
-    <% end %>
   </div>
 </div>
