@@ -1,39 +1,50 @@
-<div class="Profile-container">
-  <div class="back to home page">
-    <%= link_to 'Back to home page', friends_path(@friend) %>
+<div class="profile-container">
+
+  <div class="profile-image" style="background-image: url('https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" >
+    <h1><%=  @user.first_name %> <%= @user.last_name %></h1>
+    <%= link_to link_to 'Sign up to become a friend', new_friend_path(@friend), class:"btn btn-secondary"%>
   </div>
-  <div class="friend-profile-container">
-    <div class="card-trip">
-      <img src="https://assets.materialup.com/uploads/b6c33467-82c3-442c-a2dc-c089bbff9fa1/preview.png"/>
-      <div class="card-trip-infos">
-        <div>
-          <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-          <h5>Email:</h5>
-          <p><%= @user.email %></p>
-          <h5>Address:</h5>
-          <p><%= @user.address %></p>
-          <h5>Age</h5>
-          <p><%= @user.age %></p>
-          <h5>Birthday</h5>
-          <p><%= @user.birth_date %></p>
-          <h5>Gender</h5>
-          <p><%= @user.gender %></p>
-        </div>
+
+  <div class="profile-info">
+
+    <div class="profile-details">
+      <div class="Email">
+        <h5>My Email:</h5>
+        <p><%= @user.email %></p>
+      </div>
+
+      <div class="Address">
+        <h5>My Address:</h5>
+        <p><%= @user.address %></p>
+      </div>
+
+      <div class="Age">
+        <h5>My Age:</h5>
+        <p><%= @user.age %></p>
+      </div>
+
+      <div class="Birth-date">
+        <h5>My Birthdate:</h5>
+        <p><%= @user.birth_date %></p>
+      </div>
+
+      <div class="Gender">
+        <h5>My Gender:</h5>
+        <p><%= @user.gender %></p>
       </div>
     </div>
-  </div>
 
-  <div class="My Bookings">
-  <h1>my bookings</h1>
-  <% @bookings.each do |booking|%>
-    <li> <%= booking.friend.user.first_name %> - <%= booking.occurs_on %> </li>
-    <div>
-    <%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+    <div class="My-Bookings">
+      <h4>My Bookings:</h4>
+      <div class="Bookings">
+        <% @bookings.each do |booking|%>
+          <%= booking.friend.user.first_name %> - <%= booking.occurs_on %>
+          <div>
+          <%= link_to "Delete", booking_path(booking), class:"btn btn-secondary btn-sm", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+          </div>
+          <% end %>
+      </div>
     </div>
-    <% end %>
-  </div>
 
-  <div class="Become a friend">
-    <%= link_to 'Become a friend', new_friend_path(@friend) %>
   </div>
 </div>
